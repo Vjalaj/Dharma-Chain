@@ -58,7 +58,7 @@ This is a fully functional donation website built with Next.js, allowing users t
    ```bash
    # If you haven't cloned yet:
    git clone https://github.com/Vjalaj/Dharma-Chain.git
-   cd dharmachain-donation-website
+   cd Dharma-Chain
    
    # Install all dependencies (includes firebase-admin)
    npm install
