@@ -1,0 +1,395 @@
+# =============================================================================
+# DharmaChain - Comprehensive .gitignore
+# =============================================================================
+# This file prevents sensitive data, large files, and unnecessary build 
+# artifacts from being committed to the repository.
+#
+# Sections:
+# - Next.js and Node.js standard exclusions
+# - Environment and security files
+# - User uploads and media files  
+# - IDE and editor files
+# - Build artifacts and dependencies
+# - OS generated files
+# - Development tools and cache
+# =============================================================================
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+.genkit/*
+.env*
+
+# firebase
+firebase-debug.log
+firestore-debug.log
+
+# Images and Assets (specific exclusions)
+# Allow essential branding assets - only specific, required files
+!/public/favicon.ico
+!/public/favicon.svg
+!/public/apple-icon.svg
+!/public/logo.png
+!/public/logo.svg
+!/src/components/icons/*.tsx
+
+# Ignore all other images and media in public directory
+/public/*.jpg
+/public/*.jpeg
+/public/*.png
+/public/*.gif
+/public/*.svg
+/public/*.webp
+/public/*.avif
+/public/*.ico
+/public/*.bmp
+/public/*.tiff
+
+# But allow the essential branding back (override the above)
+!/public/favicon.ico
+!/public/favicon.svg
+!/public/apple-icon.svg
+!/public/logo.png
+!/public/logo.svg
+
+# Ignore uploaded content and temporary files
+/public/uploads/
+/public/temp/
+*.tmp
+*.temp
+
+# Ignore user-generated content
+/public/user-content/
+/public/gallery/
+
+# Ignore large media files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Ignore backup files
+*.backup
+*.bak
+
+# IDE and editor files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Security and Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging
+config.json
+secrets.json
+*.key
+*.pem
+*.p12
+*.crt
+*.cer
+*.pfx
+
+# API Keys and Sensitive Data
+*api-key*
+*secret*
+*password*
+*token*
+.credentials
+auth.json
+service-account*.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+dumps/
+
+# Logs and Cache
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.cache/
+.npm/
+.eslintcache
+.stylelintcache
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env*
+
+# Firebase
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+firebase-functions-debug.log*
+
+# Temporary folders
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+*~
+
+# Miscellaneous
+*.tsbuildinfo
+.eslintcache
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Additional media files and assets
+*.flv
+*.wmv
+*.mpg
+*.mpeg
+*.3gp
+*.m4v
+*.mp3
+*.wav
+*.aac
+*.ogg
+*.wma
+*.flac
+
+# High-resolution images (except essential ones)
+*-4k.*
+*-8k.*
+*-hd.*
+*-uhd.*
+*.raw
+*.tiff
+*.tif
+*.bmp
+*.ico.bak
+
+# Design files
+*.psd
+*.ai
+*.sketch
+*.fig
+*.xd
+*.indd
+
+# Documentation build files
+docs/_build/
+site/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Package managers
+yarn.lock.*
+package-lock.json.*
+.yarn-error.log
+.pnp.loader.mjs
+
+# Build artifacts
+*.map.js
+*.min.js.map
+*.min.css.map
+
+# Test and coverage artifacts
+/test-results/
+/playwright-report/
+/coverage/
+/jest-coverage/
+*.spec.js.snap
+*.test.js.snap
+
+# Docker
+Dockerfile.local
+docker-compose.override.yml
+.dockerignore
+*.dockerfile.bak
+
+# CDN and external resources cache
+/public/cdn/
+/public/external/
+
+# User uploaded content beyond what's already specified
+/public/avatars/
+/public/profile-images/
+/public/documents/
+/public/downloads/
+
+# Backup and version files
+*.orig
+*.save
+*.old.*
+*~$*
+.#*
+
+# System files (Windows/Linux/Mac)
+$RECYCLE.BIN/
+.fuse_hidden*
+.nfs*
+
+# Python files (in case of Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Certificate and key files (additional patterns)
+*.keystore
+*.truststore
+*.jks
+*.p7b
+*.p7c
+*.der
+
+# Analytics and tracking files
+analytics.json
+tracking.json
+gtag.json
+
+# Local configuration overrides
+config.local.json
+settings.local.json
+preferences.local.json
+
+# IDE workspace files
+.idx/
+*.code-workspace
+
+# Build info and lock files (optional, comment out if you want to track them)
+# tsconfig.tsbuildinfo
+# package-lock.json
+
+# OS and system files
+.modified
+.directory
+.fseventsd/
+.TemporaryItems/
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Additional temporary and cache files
+*.cache
+.parcel-cache/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Storybook
+.out/
+.storybook-out/
+storybook-static/
+
+# Rush
+common/deploy/
+common/temp/
+**/.rush/temp/
+
+# Stores
+.turbo/
+.swc/
